@@ -1,0 +1,256 @@
+/* Reset generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile generale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0;
+}
+
+/* Header - immagine e nome */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 60px;
+    width: 100%; /* Aggiunto per far sì che l'header occupi tutta la larghezza */
+    background: linear-gradient(to bottom right, #08b24c, #004d00);
+    border-bottom: 2px linear-gradient(to bottom right,  #4cf44c,  #006400);
+    margin-left: 0;
+    flex-wrap: wrap; /* Permette di adattarsi alla larghezza del dispositivo */
+}
+
+/* Immagine del profilo */
+.foto-profilo {
+    width: 70%;
+    max-width: 480px;
+    height: auto;
+    border: 6px solid #006400;
+    margin-right: 20px;
+}
+
+/* Nome e professione */
+.nome {
+    margin-left: 40px;
+    text-align: center;
+}
+
+.nome h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.nome p {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Divider verde */
+.divider {
+    height: 5px;
+    background-color: #006400;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Contenuto principale */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Sezione Presentazione */
+.presentazione {
+    width: 48%;
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.presentazione h2 {
+    font-size: 40px;
+    font-family: 'Roboto Slab', serif;
+    color: #006400;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+.presentazione p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+    color: #333333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover per il testo della presentazione */
+.presentazione p span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.presentazione p span:hover {
+    color: #006400;
+    transform: scale(1.1);
+}
+
+/* Griglia delle sezioni (verticale) */
+.sezioni {
+    width: 48%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* Sezione singola */
+.sezione {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Titolo delle sezioni con font impattante */
+.sezione-titolo {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    color: #006400;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Contenuto delle sezioni */
+.sezione-contenuto {
+    display: none;
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Sezione espansa */
+.sezione.aperta .sezione-contenuto {
+    display: block;
+}
+
+/* Hover per il titolo delle sezioni */
+.sezione:hover .sezione-titolo {
+    transform: scale(1.1);
+    color: #006400;
+}
+
+/* Evidenziare il testo nelle sezioni al passaggio del mouse */
+.sezione-contenuto p,
+.sezione-contenuto ul {
+    transition: color 0.3s ease;
+}
+
+.sezione-contenuto p:hover,
+.sezione-contenuto ul li:hover {
+    color: #006400;
+    font-weight: bold;
+}
+
+/* Stile per le liste nelle sezioni */
+.sezione-contenuto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+}
+
+.sezione-contenuto li {
+    margin-bottom: 5px;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 10px;
+        flex-direction: column; /* Impostiamo il layout verticale per lo schermo più piccolo */
+        text-align: center;
+    }
+
+    .foto-profilo {
+        width: 80%; /* Immagine più piccola su mobile */
+        max-width: 320px;
+    }
+
+    .nome {
+        margin-top: 20px;
+    }
+
+    .content {
+        width: 90%; /* Aumentiamo la larghezza su dispositivi mobili */
+        flex-direction: column; /* Le sezioni si disporranno verticalmente */
+    }
+
+    .presentazione, .sezioni {
+        width: 100%; /* Le due sezioni occupano l'intera larghezza */
+        margin-top: 20px;
+    }
+
+    .presentazione p {
+        font-size: 18px; /* Riduciamo la dimensione del testo */
+    }
+
+    .sezione-titolo {
+        font-size: 22px; /* Riduciamo la dimensione del titolo delle sezioni */
+    }
+}
+
+@media (max-width: 480px) {
+    .nome h1 {
+        font-size: 26px; /* Riduciamo la dimensione del nome su dispositivi molto piccoli */
+    }
+
+    .nome p {
+        font-size: 16px; /* Riduciamo la dimensione della descrizione su dispositivi molto piccoli */
+    }
+
+    .presentazione h2 {
+        font-size: 30px; /* Riduciamo la dimensione del titolo */
+    }
+
+    .presentazione p {
+        font-size: 16px; /* Riduciamo la dimensione del testo */
+    }
+
+    .sezione-titolo {
+        font-size: 20px; /* Riduciamo la dimensione dei titoli delle sezioni */
+    }
+
+    .sezione-contenuto {
+        font-size: 16px; /* Riduciamo la dimensione del contenuto delle sezioni */
+    }
+}
+

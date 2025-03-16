@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gionatan Bucci - Programmatore Junior ed Event Planner">
+    <meta name="keywords" content="Programmatore, Junior Developer, Event Planner, Perugia, CV">
+    <title>Presentazione - Gionatan Bucci</title>
+    <link rel="stylesheet" href="sito.css">
+</head>
+<body>
+
+    <!-- Parte superiore del CV: immagine e nome -->
+    <section class="header">
+        <div class="immagine">
+            <img src="https://i.postimg.cc/W4qgVFhy/IMG-1779.jpg" alt="Foto di Gionatan Bucci" class="foto-profilo">
+        </div>
+        <div class="nome">
+            <h1>GIONATAN BUCCI</h1>
+            <p>Programmatore Junior & Event Planner</p>
+        </div>
+    </section>
+
+    <!-- Linea divisoria verde -->
+    <div class="divider"></div>
+
+    <!-- Parte inferiore del CV: presentazione e sezioni -->
+    <section class="content">
+        <section class="presentazione">
+            <h2>Presentazione</h2>
+            <p>
+                Mi chiamo Gionatan Bucci, sono un Programmatore Junior e Event Planner nato a Perugia il 3 gennaio 2002. 
+                Ho una grande passione per la tecnologia e la risoluzione di problemi, e sto sviluppando competenze in programmazione 
+                con linguaggi come Python, JavaScript, HTML e CSS, sebbene la mia esperienza sia ancora a livello base.
+            </p>
+            <p>
+                Oltre alla programmazione, ho esperienza nella gestione di eventi, dove ho affinato le mie capacità organizzative e 
+                di team management. Attualmente, cerco un'opportunità come stagista o Junior Developer, dove possa crescere 
+                professionalmente e contribuire a progetti stimolanti.
+            </p>
+        </section>
+
+        <div class="sezioni">
+            <div class="sezione">
+                <h3 class="sezione-titolo">Esperienze Professionali</h3>
+                <div class="sezione-contenuto">
+                    <p>Freelance | Ottobre 2023 – Presente</p>
+                    <p>Direttore Artistico / Event Planner</p>
+                    <ul>
+                        <li>Gestione di progetti complessi, pianificazione e organizzazione di eventi.</li>
+                        <li>Coordinamento di team e gestione di risorse.</li>
+                        <li>Esperienza nell'uso di applicazioni per la gestione del budget.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sezione">
+                <h3 class="sezione-titolo">Formazione</h3>
+                <div class="sezione-contenuto">
+                    
+                    <ul>
+                        <li>Competenze in programmazione: Python, JavaScript, HTML, CSS</li>
+                        <li>Esperienza con tecnologie web e sviluppo di applicazioni front-end.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sezione">
+                <h3 class="sezione-titolo">Competenze</h3>
+                <div class="sezione-contenuto">
+                    <p><h3>COMPETENZE</h3></p>
+                    <ul>
+                        <li>Programmazione web (HTML, CSS, JavaScript)</li>
+                        <li>Conoscenza base database MySQL</li>
+                        <li>Gestione di eventi e pianificazione</li>
+                        <li>Gestione progetti</li>
+                    </ul>
+
+                    <p><h3>LINGUE</h3></p>
+                    <ul>
+                        <li>ITALIANO: Madrelingua</li>
+                        <li>INGLESE: B1</li>
+                        <li>PORTOGHESE: B2</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sezione">
+                <h3 class="sezione-titolo">Contatti</h3>
+                <div class="sezione-contenuto">
+                    <p>Telefono: +39 393 463 6882</p>
+                    <p>E-mail: gionatanbucci02@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Rende il click sulle sezioni interattivo
+        document.querySelectorAll('.sezione').forEach(item => {
+            item.addEventListener('click', function() {
+                // Controlla se la sezione è aperta o meno
+                const contenuto = this.querySelector('.sezione-contenuto');
+                
+                // Se la sezione è già aperta, la chiude
+                if (contenuto.style.display === 'block') {
+                    contenuto.style.display = 'none';
+                } else {
+                    // Se la sezione non è aperta, la apre
+                    contenuto.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
